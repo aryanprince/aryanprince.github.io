@@ -30,3 +30,13 @@ function toggleModal() {
     isModalOpen = true
     document.body.classList += ' modal--open'
 }
+
+let contrastToggle = false
+function toggleContrast() {
+    contrastToggle = !contrastToggle
+    if (contrastToggle == true) {
+        document.body.classList += ' dark-theme'
+    } else {
+        document.body.classList.remove('dark-theme')
+    }
+}
