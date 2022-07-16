@@ -98,6 +98,10 @@ button {
     color: coral !important;
 }
 
+.accent-color--about-me {
+    cursor: pointer;
+}
+
 .link__hover-effect {
     position: relative;
 }
@@ -123,6 +127,22 @@ button {
 .link__hover-effect:hover:after {
     left: 0;
     width: 100%;
+}
+
+nav,
+.scroll,
+.header {
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 600ms;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms;
 }
 
 /* LANDING PAGE */
@@ -363,7 +383,6 @@ footer {
 }
 
 /* MODAL */
-
 .modal {
     position: absolute;
     top: 50%;
@@ -372,12 +391,18 @@ footer {
     width: 90%;
     max-width: 1100px;
     height: 700px;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
     border-radius: 20px;
     overflow: hidden;
     display: flex;
+    visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
-
+.modal--open .modal {
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: visible;
+}
 .modal__half {
     width: 50%;
     padding: 40px 72px;
@@ -385,10 +410,17 @@ footer {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    transition: all 300ms ease-in;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact {
+    transform: translateX(0%);
 }
 
 .modal__about {
     background-color: rgb(245, 245, 245);
+    transform: translateX(-110%);
 }
 
 .modal__languages {
@@ -406,13 +438,13 @@ footer {
     transition: all 300ms ease;
 }
 
+.modal__language:hover .language__name {
+    transform: scale(1);
+}
+
 .modal__language:hover {
     filter: brightness(80%);
     transform: scale(0.9);
-}
-
-.modal__language:hover .language__name {
-    transform: scale(1);
 }
 
 .language__name {
@@ -427,6 +459,7 @@ footer {
 }
 
 .modal__contact {
+    transform: translateX(110%);
     background-color: #242424;
     color: white;
 }
@@ -462,7 +495,7 @@ footer {
 }
 
 .form__submit:hover {
-    border-color: white;
+    border-color: #fff;
     background-color: transparent;
 }
 
@@ -477,9 +510,9 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
+    display: none;
     align-items: center;
+    justify-content: center;
     z-index: -1;
 }
 
@@ -498,10 +531,11 @@ footer {
 
 .modal__overlay--visible {
     z-index: 1;
+    display: flex;
 }
 
 .fa-spinner {
-    animation: spinner 750ms infinite;
+    animation: spinner 750ms infinite linear;
 }
 
 @keyframes spinner {
@@ -518,7 +552,7 @@ footer {
     position: absolute;
     top: 30px;
     right: 40px;
-    color: white;
+    color: #fff;
     font-size: 36px;
     z-index: 100;
 }

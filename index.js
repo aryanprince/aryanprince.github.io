@@ -2,6 +2,8 @@
 // service_fr8ahyn
 // YTrBCbqIhXbLuMGQI
 
+let isModalOpen = false
+
 function contact(event) {
     event.preventDefault()
     const loading = document.querySelector('.modal__overlay--loading')
@@ -18,4 +20,13 @@ function contact(event) {
             loading.classList.remove('modal__overlay--visible')
             alert('The email service is temporarily unavilable, please contact me directly on hey@aryanprince.com')
         })
+}
+
+function toggleModal() {
+    if (isModalOpen) {
+        isModalOpen = false
+        return document.body.classList.remove('modal--open')
+    }
+    isModalOpen = true
+    document.body.classList += ' modal--open'
 }
