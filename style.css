@@ -697,6 +697,12 @@ footer {
     .modal__half {
         width: 100%;
     }
+    .skills__language {
+        padding: 40px;
+    }
+    .language__name {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -723,5 +729,11 @@ footer {
     }
     .modal__half {
         padding: 40px;
+    }
+    .skills__language {
+        padding: 15px;
+    }
+    .language__name {
+        font-size: 18px;
     }
 }
