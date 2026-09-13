@@ -22,7 +22,7 @@ export const work = [
   {
     company: "Trilogy Health",
     role: "Lead mobile engineer, consulting",
-    date: "2024–present",
+    date: "Jun 2024 - May 2025",
     description:
       "Led the rebuild and launch of a mobile health app, connecting health data, subscriptions and real-time experiences. I continue to support the product after launch.",
     detail: "",
@@ -33,7 +33,7 @@ export const work = [
     role: "Software engineering consultant",
     date: "Feb–May 2025",
     description:
-      "Built web features and supported Kubernetes infrastructure for a platform working with live video and AI analysis.",
+      "Co-architected and implemented a customer-facing dashboard, from authentication and data to the frontend, and contributed to agentic AI workflows.",
     detail: "",
     stack: "",
   },
