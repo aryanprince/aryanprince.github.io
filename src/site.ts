@@ -10,6 +10,7 @@ export const site = {
 export const work = [
   {
     company: "PortzApp",
+    logo: "/companies/portzapp.svg",
     role: "CTO & founding engineer",
     date: "2025–present",
     description:
@@ -20,6 +21,7 @@ export const work = [
   },
   {
     company: "Trilogy Health",
+    logo: "/companies/trilogy.png",
     role: "Lead mobile engineer, consulting",
     date: "Jun 2024 - May 2025",
     description:
@@ -29,6 +31,7 @@ export const work = [
   },
   {
     company: "Parabola9",
+    logo: "/companies/parabola9.jpg",
     role: "Software engineering consultant",
     date: "Feb–May 2025",
     description:

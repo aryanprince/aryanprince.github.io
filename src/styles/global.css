@@ -328,9 +328,9 @@ footer a {
   gap: 16px 24px;
   list-style: none;
   padding: 0;
-  margin: 26px 0 30px;
+  margin: 10px 0 8px;
 }
-.tech-logos li {
+.tech-logos .tech-item {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -340,7 +340,7 @@ footer a {
 }
 .tech-logos img {
   object-fit: contain;
-  flex: 0 0 20px;
+  flex: 0 0 18px;
   filter: grayscale(1);
 }
 @media (max-width: 540px) {
@@ -370,3 +370,17 @@ h1 { font-size: clamp(58px, 9vw, 104px); }
 }
 @media (max-width: 420px) { h1 { font-size: 58px; } .contact h2 { font-size: 32px; } }
 @media (max-width: 360px) { h1 { font-size: 51px; } }
+
+.company-name { display: inline-flex; align-items: center; gap: 10px; }
+.company-mark { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #ddd; border-radius: 6px; flex: 0 0 34px; }
+.company-mark img { width: 28px; height: 28px; object-fit: contain; filter: grayscale(1) brightness(.65); }
+.practice dl > div + div { margin-top: 26px; }
+.tech-logos { gap: 12px 20px; }
+.side-projects p { text-wrap: pretty; max-width: 36ch; }
+@media (max-width: 540px) { .tech-logos .secondary-tech { display: none; } }
+@media (min-width: 1000px) {
+  .tech-logos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.signature { display: block; width: 94px; height: 40px; object-fit: contain; }
+@media (prefers-color-scheme: dark) { .signature { filter: invert(1); } }
