@@ -2,6 +2,11 @@
 import '@fontsource-variable/instrument-sans';
 import '../styles/global.css';
 import { site, work } from '../site';
+const techStack = [
+  ['TypeScript', 'typescript'], ['React', 'react'], ['Laravel', 'laravel'],
+  ['Expo', 'expo'], ['PostgreSQL', 'postgresql'], ['Redis', 'redis'],
+  ['Azure', 'azure'], ['Kubernetes', 'kubernetes'], ['Terraform', 'terraform'], ['Docker', 'docker'],
+];
 const resumeHref = site.resumeUrl || `mailto:${site.email}?subject=Resume%20request`;
 const resumeLabel = site.resumeUrl ? 'Resume' : 'Request resume';
 const description = 'Aryan Prince is a CTO and founding engineer building web, mobile and AI products. Currently leading engineering at PortzApp.';
@@ -63,6 +68,11 @@ const description = 'Aryan Prince is a CTO and founding engineer building web, m
           <h2 id="practice-title">In practice</h2>
           <div class="section-content practice">
             <p>I work across product, engineering and operations. I care about clear architecture, useful tests and knowing what happens after a release.</p>
+            <ul class="tech-logos" aria-label="Core technology stack">
+              {techStack.map(([label, icon]) => (
+                <li><img src={`/logos/${icon}.svg`} width="20" height="20" alt="" loading="lazy" decoding="async" /><span>{label}</span></li>
+              ))}
+            </ul>
             <dl>
               <div><dt>Product engineering</dt><dd>TypeScript, PHP, React, Laravel, Expo and Effect.</dd></div>
               <div><dt>Systems & delivery</dt><dd>PostgreSQL, Redis, Azure, Kubernetes and Terraform. CI/CD, end-to-end testing and OpenTelemetry.</dd></div>

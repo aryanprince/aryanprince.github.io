@@ -317,3 +317,39 @@ footer a {
     scroll-behavior: auto;
   }
 }
+
+/* Small, labelled brand marks support the stack without competing with the copy. */
+.tech-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 30px;
+}
+.tech-logos li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--body);
+}
+.tech-logos img {
+  object-fit: contain;
+  flex: 0 0 20px;
+  filter: grayscale(1);
+}
+@media (max-width: 540px) {
+  .work-heading { flex-wrap: wrap; gap: 2px 16px; }
+  .side-projects { grid-template-columns: 1fr; gap: 26px; }
+  .header nav a, .profile-links a { min-height: 44px; display: inline-flex; align-items: center; }
+  .tech-logos { gap: 16px 20px; }
+  .contact > a { overflow-wrap: anywhere; }
+}
+@media (max-width: 360px) {
+  .page { padding-inline: 18px; }
+  h1 { font-size: 48px; }
+  .header nav { gap: 14px; }
+  .role { font-size: 21px; }
+}
