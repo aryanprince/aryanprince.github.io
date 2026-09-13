@@ -1,9 +1,8 @@
 export const site = {
   name: "Aryan Prince",
   email: "hello@aryanprince.com",
-  // Set this to your hosted PDF URL when it is ready.
-  // Until then, the site offers a working "Request resume" email link.
-  resumeUrl: "",
+  // Replace public/resume.pdf when publishing a new Overleaf export.
+  resumeUrl: "/resume.pdf",
   github: "https://github.com/aryanprince",
   linkedin: "https://www.linkedin.com/in/aryanprince/",
 };

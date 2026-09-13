@@ -12,3 +12,10 @@ Assets from SVGL (MIT) and Simple Icons (CC0). Brand marks remain the property o
 - `terraform.svg`: https://github.com/pheralb/svgl/blob/HEAD/static/library/terraform.svg (source blob: `b2bf28117b384b5080f8f9b1e774348b8b93b93e`)
 - `expo.svg`: https://github.com/simple-icons/simple-icons/blob/HEAD/icons/expo.svg (source blob: `46a6a41821367aeb03896b7c5d06a2e36f89d9f6`)
 - `docker.svg`: https://github.com/simple-icons/simple-icons/blob/HEAD/icons/docker.svg (source blob: `0021a8a7b34c50389e48d7035b19067f2d909fe3`)
+
+- php.svg: https://github.com/pheralb/svgl/blob/main/static/library/php.svg (MIT)
+- astro.svg: https://github.com/pheralb/svgl/blob/main/static/library/astro-icon-light.svg (MIT)
+- nextjs.svg: https://github.com/pheralb/svgl/blob/main/static/library/nextjs_icon_dark.svg (MIT)
+- effect.svg: https://github.com/pheralb/svgl/blob/main/static/library/effect_light.svg (MIT)
+- sentry.svg: https://github.com/pheralb/svgl/blob/main/static/library/sentry.svg (MIT)
+- playwright.svg: https://github.com/pheralb/svgl/blob/main/static/library/playwright.svg (MIT)

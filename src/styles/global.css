@@ -1,8 +1,11 @@
 :root {
-  font-family: "Instrument Sans Variable", sans-serif;
-  color: #000;
-  background: #fff;
+  font-family: "Geist Variable", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
   font-synthesis: none;
+  --ink: #111;
+  --paper: #fff;
+  color-scheme: light dark;
   --body: #303030;
   --muted: #666;
   --rule: #dedede;
@@ -26,10 +29,10 @@ a {
   text-underline-offset: 5px;
 }
 a:hover {
-  text-decoration-color: #000;
+  text-decoration-color: var(--ink);
 }
 a:focus-visible {
-  outline: 2px solid #000;
+  outline: 2px solid var(--ink);
   outline-offset: 6px;
 }
 ::selection {
@@ -213,7 +216,7 @@ dd {
   margin-top: 9px;
 }
 .contact {
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--ink);
   padding: 48px 0 64px;
 }
 .contact h2 {
@@ -353,3 +356,17 @@ footer a {
   .header nav { gap: 14px; }
   .role { font-size: 21px; }
 }
+
+/* Serif display type adds warmth while Geist keeps the details crisp. */
+h1, .contact h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; letter-spacing: -0.035em; }
+h1 { font-size: clamp(58px, 9vw, 104px); }
+.contact h2 { font-size: 38px; }
+.icon { display: inline-flex; width: 1em; height: 1em; vertical-align: -0.12em; margin-left: 3px; }
+.icon svg { width: 100%; height: 100%; fill: currentColor; }
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #f3f3f3; --paper: #111; --body: #d3d3d3; --muted: #aaa; --rule: #343434; }
+  .tech-logos img { filter: grayscale(1) invert(1) brightness(2); }
+  ::selection { background: #eee; color: #111; }
+}
+@media (max-width: 420px) { h1 { font-size: 58px; } .contact h2 { font-size: 32px; } }
+@media (max-width: 360px) { h1 { font-size: 51px; } }

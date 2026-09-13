@@ -1,10 +1,13 @@
 ---
-import '@fontsource-variable/instrument-sans';
+import '@fontsource-variable/geist';
+import '@fontsource/instrument-serif/400.css';
+import arrowUpRight from '@phosphor-icons/core/assets/regular/arrow-up-right.svg?raw';
+import arrowUp from '@phosphor-icons/core/assets/regular/arrow-up.svg?raw';
 import '../styles/global.css';
 import { site, work } from '../site';
 const techStack = [
   ['TypeScript', 'typescript'], ['React', 'react'], ['Laravel', 'laravel'],
-  ['Expo', 'expo'], ['PostgreSQL', 'postgresql'], ['Redis', 'redis'],
+  ['Expo', 'expo'], ['PHP', 'php'], ['Astro', 'astro'], ['Next.js', 'nextjs'], ['Effect', 'effect'], ['Sentry', 'sentry'], ['Playwright', 'playwright'], ['PostgreSQL', 'postgresql'], ['Redis', 'redis'],
   ['Azure', 'azure'], ['Kubernetes', 'kubernetes'], ['Terraform', 'terraform'], ['Docker', 'docker'],
 ];
 const resumeHref = site.resumeUrl || `mailto:${site.email}?subject=Resume%20request`;
@@ -16,7 +19,9 @@ const description = 'Aryan Prince is a CTO and founding engineer building web, m
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
     <title>Aryan Prince | CTO & Founding Engineer</title>
     <meta name="description" content={description} />
     <link rel="canonical" href="https://aryanprince.com/" />
@@ -35,7 +40,7 @@ const description = 'Aryan Prince is a CTO and founding engineer building web, m
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
           <a href={site.github}>GitHub</a>
-          <a href={`mailto:${site.email}`}>Say hello <span aria-hidden="true">↗</span></a>
+          <a href={`mailto:${site.email}`}>Say hello <span class="icon" aria-hidden="true" set:html={arrowUpRight} /></a>
         </nav>
       </header>
       <main id="main">
@@ -83,18 +88,18 @@ const description = 'Aryan Prince is a CTO and founding engineer building web, m
         <section class="section" aria-labelledby="side-title">
           <h2 id="side-title">Open source</h2>
           <div class="section-content side-projects">
-            <article><h3><a href="https://github.com/aryanprince/skill-sync">Skill Sync <span aria-hidden="true">↗</span></a></h3><p>A macOS menu bar app to keep coding-agent skills and MCP configurations in sync.</p></article>
-            <article><h3><a href="https://github.com/aryanprince/svgl-react">svgl-react <span aria-hidden="true">↗</span></a></h3><p>A React component library that brings SVG logos from SVGL into your interface.</p></article>
-            <article><h3><a href="https://github.com/aryanprince/create-docker-db">create-docker-db <span aria-hidden="true">↗</span></a></h3><p>A CLI for setting up local databases with Docker Compose.</p></article>
-            <article><h3><a href="https://github.com/aryanprince/campus-hub">Campus Hub <span aria-hidden="true">↗</span></a></h3><p>A university management project built around independently deployed services in a Next.js monorepo.</p></article>
+            <article><h3><a href="https://github.com/aryanprince/skill-sync">Skill Sync <span class="icon" aria-hidden="true" set:html={arrowUpRight} /></a></h3><p>A macOS menu bar app to keep coding-agent skills and MCP configurations in sync.</p></article>
+            <article><h3><a href="https://github.com/aryanprince/svgl-react">svgl-react <span class="icon" aria-hidden="true" set:html={arrowUpRight} /></a></h3><p>A React component library that brings SVG logos from SVGL into your interface.</p></article>
+            <article><h3><a href="https://github.com/aryanprince/create-docker-db">create-docker-db <span class="icon" aria-hidden="true" set:html={arrowUpRight} /></a></h3><p>A CLI for setting up local databases with Docker Compose.</p></article>
+            <article><h3><a href="https://github.com/aryanprince/campus-hub">Campus Hub <span class="icon" aria-hidden="true" set:html={arrowUpRight} /></a></h3><p>A university management project built around independently deployed services in a Next.js monorepo.</p></article>
           </div>
         </section>
         <section class="contact" aria-labelledby="contact-title">
           <h2 id="contact-title">Have something in mind?</h2>
-          <a href={`mailto:${site.email}`}>{site.email} <span aria-hidden="true">↗</span></a>
+          <a href={`mailto:${site.email}`}>{site.email} <span class="icon" aria-hidden="true" set:html={arrowUpRight} /></a>
         </section>
       </main>
-      <footer><span>© {new Date().getFullYear()} Aryan Prince</span><a href="#main">Back to top ↑</a></footer>
+      <footer><span>© {new Date().getFullYear()} Aryan Prince</span><a href="#main">Back to top <span class="icon" aria-hidden="true" set:html={arrowUp} /></a></footer>
     </div>
   </body>
 </html>
